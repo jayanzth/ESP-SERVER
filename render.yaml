@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: esp32-mongodb-server
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: MONGO_URI
+        value: 'mongodb+srv://jayanth:jayanth@clustertwo.qhhdn.mongodb.net/?retryWrites=true&w=majority&appName=ClusterTwo'
